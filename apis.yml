@@ -1,23 +1,49 @@
 aid: app-annie
+
 name: data.ai
-description: 'data.ai is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'data.ai provides a comprehensive mobile app market intelligence platform, delivering app store analytics, market trends, competitor insights, and user acquisition data for businesses and developers worldwide. The platform aggregates data from major app stores, offering dashboards, reports, and API access to help clients make data‑driven decisions about product strategy, marketing, and investment.'
+
 url: https://raw.githubusercontent.com/api-evangelist/app-annie/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-25 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-25'
+
 modified: '2026-09-25'
+
 tags:
-- Company
-apis: []
+- Mobile
+- Analytics
+- Market-Intelligence
+- App-Store
+- Data
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/app-annie-hosts.yml
+- type: DomainSecurity
+  url: security/app-annie-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/app-annie_stock/
+  url: https://www.data.ai/account/login/
+
+apis: []
+x-enrichment:
+  date: '2026-09-25'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
